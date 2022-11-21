@@ -1,23 +1,15 @@
 {
     "name": "vanilla-javascript-boiler-plate",
     "version": "1.0.0",
-    "description": "",
+    "description": "바닐라 자바스크립트 환경의 보일러 플레이트 입니다.",
     "main": "index.js",
     "scripts": {
         "build": "webpack --mode production",
         "dev": "webpack-dev-server --mode development --open"
     },
-    "repository": {
-        "type": "git",
-        "url": "git+https://github.com/yeeed711/vanilla-JavaScript-boiler-plate.git"
-    },
     "keywords": [],
-    "author": "",
+    "author": "yeeed",
     "license": "ISC",
-    "bugs": {
-        "url": "https://github.com/yeeed711/vanilla-JavaScript-boiler-plate/issues"
-    },
-    "homepage": "https://github.com/yeeed711/vanilla-JavaScript-boiler-plate#readme",
     "devDependencies": {
         "copy-webpack-plugin": "^11.0.0",
         "css-loader": "^6.7.2",
