@@ -1,6 +1,7 @@
 const path = require('path');
 const HtmlPlugin = require('html-webpack-plugin');
 const CopyPlugin = require('copy-webpack-plugin');
+const MiniCssExtractPlugin = require('mini-css-extract-plugin');
 
 module.exports = {
     entry: './src/main.js',
@@ -18,6 +19,11 @@ module.exports = {
                     filename: 'assets/images/[name][ext]',
                 },
             },
+            {
+                test: /\.s[ac]ss$/i,
+                use: [MiniCssExtractPlugin.loader, 'css-loader', 'sass-loader'],
+                exclude: /node_modules/,
+            },
         ],
     },
     devtool: 'inline-source-map',
@@ -33,6 +39,9 @@ module.exports = {
         }),
         new CopyPlugin({
             patterns: [{ from: 'public/favicon.ico' }],
+        }),
+        new MiniCssExtractPlugin({
+            filename: 'assets/css/style.[contenthash].css',
         }),
     ],
 };
