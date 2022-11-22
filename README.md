@@ -7,7 +7,7 @@
 1. git repository clone
 
 ```
-git clone
+git clone https://github.com/yeeed711/vanilla-javascript-boiler-plate.git
 ```
 
 2. start
